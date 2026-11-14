@@ -1,0 +1,23 @@
+plugins {
+	id("apod.android.optimized-library")
+	alias(libs.plugins.dagger.hilt.android)
+	alias(libs.plugins.ksp)
+}
+
+android {
+	namespace = "eu.pw.apod.domain"
+}
+
+dependencies {
+	implementation(project(":domain:contract"))
+	implementation(libs.timber)
+
+	implementation(libs.hilt)
+	ksp(libs.hilt.compiler)
+	ksp(libs.hilt.compiler.androidx)
+
+	testImplementation(libs.junit)
+	testImplementation(libs.kotlinx.coroutines.test)
+
+	androidTestImplementation(libs.androidx.junit)
+}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Apod</string>
+    <string name="apod_button_reload">Odśwież</string>
+    <string name="apod_button_retry">Ponów</string>
+    <string name="apod_load_error">Nie udało się załadować dzisiejszego zdjęcia astronomicznego. Spróbuj ponownie.</string>
+    <string name="apod_image_loading">Ładowanie obrazu</string>
+    <string name="apod_image_unavailable">Obraz jest niedostępny</string>
+</resources>

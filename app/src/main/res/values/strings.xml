@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Apod</string>
+    <string name="apod_button_reload">Reload</string>
+    <string name="apod_button_retry">Retry</string>
+    <string name="apod_load_error">Unable to load today\'s astronomy picture. Please try again.</string>
+    <string name="apod_image_loading">Loading image</string>
+    <string name="apod_image_unavailable">Image unavailable</string>
+</resources>
