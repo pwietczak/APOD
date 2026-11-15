@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,22 +15,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import eu.pw.apod.presentation.apod.model.ApodUi
-import eu.pw.apod.presentation.apod.model.ImageUi
 import eu.pw.designsystem.ui.theme.ApodTheme
 
 @Composable
 internal fun ApodSuccessContent(
 	modifier: Modifier,
 	apod: ApodUi,
-                               ) {
+) {
 	Column(
 		modifier =
 			modifier
 				.fillMaxSize()
 				.verticalScroll(rememberScrollState()),
-		verticalArrangement = Arrangement.spacedBy(16.dp),
+		verticalArrangement = Arrangement.spacedBy(ApodTheme.spacing.large),
 		horizontalAlignment = Alignment.CenterHorizontally,
 	) {
 		ApodImageCard(
@@ -43,8 +40,8 @@ internal fun ApodSuccessContent(
 			Text(
 				modifier = Modifier.fillMaxWidth(),
 				text = apod.explanation,
-				style = MaterialTheme.typography.bodyLarge,
-				textAlign = TextAlign.Center,
+				style = ApodTheme.typography.bodyMedium,
+				textAlign = TextAlign.Justify,
 			)
 		}
 	}
@@ -60,15 +57,15 @@ private fun ApodImageCard(
 			modifier =
 				Modifier
 					.fillMaxWidth()
-					.padding(16.dp),
-			verticalArrangement = Arrangement.spacedBy(16.dp),
+					.padding(ApodTheme.spacing.large),
+			verticalArrangement = Arrangement.spacedBy(ApodTheme.spacing.large),
 			horizontalAlignment = Alignment.CenterHorizontally,
 		) {
 			apod.title?.let {
 				Text(
 					modifier = Modifier.fillMaxWidth(),
 					text = apod.title,
-					style = MaterialTheme.typography.titleLarge,
+					style = ApodTheme.typography.titleLarge,
 					textAlign = TextAlign.Center,
 				)
 			}
@@ -77,7 +74,7 @@ private fun ApodImageCard(
 				Text(
 					modifier = Modifier.fillMaxWidth(),
 					text = apod.date,
-					style = MaterialTheme.typography.bodyMedium,
+					style = ApodTheme.typography.bodyMedium,
 					textAlign = TextAlign.Center,
 				)
 			}
@@ -91,7 +88,7 @@ private fun ApodImageCard(
 				Text(
 					modifier = Modifier.fillMaxWidth(),
 					text = apod.credit,
-					style = MaterialTheme.typography.bodyLarge,
+					style = ApodTheme.typography.bodyLarge,
 					textAlign = TextAlign.Center,
 				)
 			}
@@ -111,15 +108,11 @@ private fun ApodSuccessContentPreview() {
 						date = "2024-06-01",
 						title = "Sample Title",
 						postUrl = "https://example.com",
-						imageUi =
-							ImageUi(
-								url = "https://example.com/sample-image.jpg",
-								alt = "Sample Image",
-							),
+						imageUi = null,
 						credit = "Sample Credit",
 						explanation = "Sample Explanation",
 					),
-			                  )
+			)
 		}
 	}
 }

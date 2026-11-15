@@ -19,7 +19,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.unit.dp
 import coil3.ColorImage
 import coil3.annotation.ExperimentalCoilApi
 import coil3.compose.AsyncImagePreviewHandler
@@ -29,6 +28,7 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import eu.pw.apod.R
 import eu.pw.apod.presentation.apod.model.ImageUi
+import eu.pw.designsystem.ui.theme.ApodTheme
 
 @OptIn(ExperimentalCoilApi::class)
 @Composable
@@ -58,7 +58,7 @@ internal fun ApodImage(
 					.build(),
 			contentDescription = imageUi.alt,
 			contentScale = ContentScale.FillWidth,
-			modifier = modifier.clip(RoundedCornerShape(16.dp)),
+			modifier = modifier.clip(RoundedCornerShape(ApodTheme.spacing.large)),
 			loading = {
 				Box(
 					modifier = Modifier.fillMaxWidth().aspectRatio(1f),
@@ -82,7 +82,12 @@ internal fun ApodImage(
 @Composable
 private fun ImageUnavailableContent(modifier: Modifier) {
 	Box(
-		modifier = modifier.fillMaxWidth().aspectRatio(1f).clip(RoundedCornerShape(16.dp)),
+		modifier =
+			modifier
+				.fillMaxWidth()
+				.aspectRatio(
+					1f,
+				).clip(RoundedCornerShape(ApodTheme.spacing.large)),
 		contentAlignment = Alignment.Center,
 	) {
 		Text(

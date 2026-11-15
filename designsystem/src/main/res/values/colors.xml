@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="apod_primary">#FF485D92</color>
+    <color name="apod_on_primary">#FFFFFFFF</color>
+    <color name="apod_surface">#FFFAF8FF</color>
+</resources>

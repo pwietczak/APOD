@@ -30,6 +30,7 @@ moshi = "1.15.2"
 coil = "3.6.3"
 jsoup = "1.19.1"
 coroutines = "1.10.2"
+splashscreen = "1.2.0"
 
 [libraries]
 # AndroidX core and lifecycle
@@ -88,8 +89,8 @@ kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-p
 androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 ktlintGradlePlugin = { group = "org.jlleitschuh.gradle", name = "ktlint-gradle", version.ref = "ktlint" }
 
-# Kept for a future Android splash screen dependency.
-#splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
+# splash screen dependency.
+splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
 
 # Bundles group libraries that are normally used together with the same configuration.
 [bundles]

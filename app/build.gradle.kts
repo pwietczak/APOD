@@ -33,6 +33,7 @@ dependencies {
 	implementation(libs.androidx.activity.compose)
 	implementation(libs.timber)
 	implementation(libs.bundles.coil)
+	implementation(libs.splashscreen)
 
 	implementation(libs.hilt)
 	implementation(libs.hilt.navigation.compose)
