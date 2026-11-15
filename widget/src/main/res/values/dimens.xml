@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="w_min_width">220dp</dimen>
+    <dimen name="w_min_height">120dp</dimen>
+    <dimen name="w_text_size">14sp</dimen>
+    <dimen name="w_radius">16dp</dimen>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">APOD</string>
+    <string name="w_preview_text">The only way to do great work is to love what you do.</string>
+</resources>

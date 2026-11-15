@@ -25,6 +25,8 @@ dependencies {
 	implementation(project(":data"))
 	implementation(project(":domain"))
 	implementation(project(":domain:contract"))
+	implementation(project(":widget"))
+	implementation(project(":widget:contract"))
 
 	implementation(platform(libs.androidx.compose.bom))
 	implementation(libs.bundles.compose)
