@@ -5,8 +5,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import eu.pw.apod.R
+import eu.pw.apod.designsystem.component.PrimaryButton
 import eu.pw.apod.presentation.apod.ApodUiState
-import eu.pw.designsystem.component.PrimaryButton
 
 @Composable
 internal fun ApodScreenBottomBar(

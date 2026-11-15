@@ -16,8 +16,7 @@ dependencies {
 	ksp(libs.hilt.compiler)
 	ksp(libs.hilt.compiler.androidx)
 
-	testImplementation(libs.junit)
-	testImplementation(libs.kotlinx.coroutines.test)
+	testImplementation(libs.bundles.unit.test)
 
 	androidTestImplementation(libs.androidx.junit)
 }

@@ -27,8 +27,8 @@ import coil3.compose.SubcomposeAsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import eu.pw.apod.R
+import eu.pw.apod.designsystem.ui.theme.ApodTheme
 import eu.pw.apod.presentation.apod.model.ImageUi
-import eu.pw.designsystem.ui.theme.ApodTheme
 
 @OptIn(ExperimentalCoilApi::class)
 @Composable

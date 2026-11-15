@@ -1,36 +1,42 @@
 # Android and UI dependency versions
 [versions]
 agp = "9.5.1"
-coreKtx = "1.19.1"
-lifecycleRuntimeKtx = "2.11.0"
 activityCompose = "1.13.0"
 composeBom = "2026.02.01"
+coreKtx = "1.19.1"
 glance = "1.2.0"
+lifecycleRuntimeKtx = "2.11.0"
 
 # Kotlin and Gradle plugin versions
+jetbrainsKotlinJvm = "2.4.10"
 kotlin = "2.4.10"
 kotlinGradlePlugin = "2.4.10"
-jetbrainsKotlinJvm = "2.4.10"
 kspPlugin = "2.3.6"
 ktlint = "14.2.0"
 
 # Testing versions
+espressoCore = "3.7.0"
 junit = "4.13.2"
 junitVersion = "1.3.0"
-espressoCore = "3.7.0"
 
-# Application library versions
+# Image loading
+coil = "3.6.3"
+# Concurrency and persistence
+coroutines = "1.10.2"
+datastore = "1.0.0"
+# Dependency injection
 hilt = "2.60.1"
 hiltAndroidx = "1.3.0"
-ktor = "3.6.1"
-datastore = "1.0.0"
-work = "2.11.0"
-timber = "5.0.1"
-moshi = "1.15.2"
-coil = "3.6.3"
+# Networking and parsing
 jsoup = "1.19.1"
-coroutines = "1.10.2"
+ktor = "3.6.1"
+# Serialization
+moshi = "1.15.2"
+# AndroidX UI and background work
 splashscreen = "1.2.0"
+work = "2.11.0"
+# Logging
+timber = "5.0.1"
 
 [libraries]
 # AndroidX core and lifecycle
@@ -40,19 +46,25 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 
 # Jetpack Compose
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+
+# Compose tooling and UI tests
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
-androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 
 # AndroidX Glance widgets
 glance-appwidget = { group = "androidx.glance", name = "glance-appwidget", version.ref = "glance" }
 glance-appwidget-preview = { group = "androidx.glance", name = "glance-appwidget-preview", version.ref = "glance" }
 glance-material3 = { group = "androidx.glance", name = "glance-material3", version.ref = "glance" }
 glance-preview = { group = "androidx.glance", name = "glance-preview", version.ref = "glance" }
+
+# Persistence and background work
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+work = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
 
 # Dependency injection
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
@@ -65,50 +77,74 @@ hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltAn
 ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
 ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
 
-# Persistence and background work
-work = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+# HTML parsing
+jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
 
-# Serialization and logging
-moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+# Serialization
 moshi-adapters = { group = "com.squareup.moshi", name = "moshi-adapters", version.ref = "moshi" }
 moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
-timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
-jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
-kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 
-coil-compose = {group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
-coil-network-okhttp = {group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
+# Logging
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Image loading
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network-okhttp = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
 
 # Tests
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 # Build-logic dependencies
-kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 ktlintGradlePlugin = { group = "org.jlleitschuh.gradle", name = "ktlint-gradle", version.ref = "ktlint" }
 
-# splash screen dependency.
+# Splash screen
 splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
 
 # Bundles group libraries that are normally used together with the same configuration.
 [bundles]
 compose = [
-	"androidx-activity-compose",
-	"androidx-compose-material3",
-	"androidx-compose-ui",
-	"androidx-compose-ui-graphics",
-	"androidx-compose-ui-tooling-preview",
+    "androidx-activity-compose",
+    "androidx-compose-material3",
+    "androidx-compose-ui",
+    "androidx-compose-ui-graphics",
+    "androidx-compose-ui-tooling-preview",
+]
+compose-ui = [
+    "androidx-compose-ui",
+    "androidx-compose-ui-tooling-preview",
 ]
 android-test = [
-	"androidx-compose-ui-test-junit4",
-	"androidx-espresso-core",
-	"androidx-junit",
+    "androidx-compose-ui-test-junit4",
+    "androidx-espresso-core",
+    "androidx-junit",
+]
+glance = [
+    "glance-appwidget",
+    "glance-appwidget-preview",
+    "glance-material3",
+    "glance-preview",
 ]
 coil = [
     "coil-compose",
-    "coil-network-okhttp"
+    "coil-network-okhttp",
+]
+hilt-runtime = [
+    "hilt",
+    "hilt-work",
+]
+moshi = [
+    "moshi-adapters",
+    "moshi-kotlin",
+]
+unit-test = [
+    "junit",
+    "kotlinx-coroutines-test",
 ]
 
 [plugins]

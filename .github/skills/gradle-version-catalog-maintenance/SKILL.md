@@ -10,12 +10,14 @@ Use this skill only for Gradle version catalog files, typically `gradle/libs.ver
 ## Workflow
 
 1. Read the entire target TOML catalog and identify its existing sections, aliases, versions, comments, and plugin entries.
-2. If bundles are requested or useful for the requested cleanup, inspect build scripts to see which dependencies are used together and under which Gradle configurations.
+2. Always inspect the build scripts that consume the catalog and inventory dependency groups used together by module and configuration. Do not limit this review to bundles that already exist or to bundles explicitly requested.
 3. Group entries into clear topic-based sections and add short comments that clarify the groups or non-obvious intent.
 4. Preserve every existing version, alias, and commented-out entry. Do not remove entries just because they are currently unused.
-5. Add bundles only for dependencies that are commonly consumed together with the same configuration. Keep platform/BOM declarations, debug-only dependencies, annotation processors, and test dependencies in their appropriate configurations.
-6. Update relevant build scripts to consume new bundles without changing the dependency scopes or behavior.
-7. Validate the catalog and affected build, normally by running the smallest relevant Gradle build task.
+5. For each inventoried group, explicitly decide whether a bundle is useful. Add bundles for related libraries used together under the same Gradle configuration, including groups confined to one module (for example, a widget module that uses the Glance libraries together). Do not skip a suitable group just because it has no existing bundle.
+6. Keep platform/BOM declarations, debug-only dependencies, annotation processors, and dependencies with different scopes out of bundles. Do not create bundles for unrelated libraries merely because they share a configuration.
+7. Update every relevant build script to consume new bundles without changing dependency scopes or behavior.
+8. Before finishing, compare the catalog bundles with the inventory: confirm every useful same-configuration group has been considered and either bundled or deliberately left separate. State when no additional useful bundles were found.
+9. Validate the catalog and affected build, normally by running the smallest relevant Gradle build task.
 
 ## Guidelines
 

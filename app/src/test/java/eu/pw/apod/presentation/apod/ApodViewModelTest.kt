@@ -1,9 +1,9 @@
 package eu.pw.apod.presentation.apod
 
+import eu.pw.apod.domain.contract.model.Apod
+import eu.pw.apod.domain.contract.model.Image
+import eu.pw.apod.domain.contract.usecase.GetApodUseCase
 import eu.pw.apod.presentation.apod.model.ApodUiMapper
-import eu.pw.domain.contract.model.Apod
-import eu.pw.domain.contract.model.Image
-import eu.pw.domain.contract.usecase.GetApodUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.awaitCancellation

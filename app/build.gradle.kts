@@ -30,26 +30,21 @@ dependencies {
 	implementation(libs.bundles.compose)
 	implementation(libs.androidx.core.ktx)
 	implementation(libs.androidx.lifecycle.runtime.ktx)
-	implementation(libs.androidx.activity.compose)
 	implementation(libs.timber)
 	implementation(libs.bundles.coil)
 	implementation(libs.splashscreen)
 
-	implementation(libs.hilt)
+	implementation(libs.bundles.hilt.runtime)
 	implementation(libs.hilt.navigation.compose)
-	implementation(libs.hilt.work)
 	ksp(libs.hilt.compiler)
 	ksp(libs.hilt.compiler.androidx)
 
 	implementation(libs.work)
 
-	testImplementation(libs.junit)
-	testImplementation(libs.kotlinx.coroutines.test)
+	testImplementation(libs.bundles.unit.test)
 
 	androidTestImplementation(platform(libs.androidx.compose.bom))
-	androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-	androidTestImplementation(libs.androidx.espresso.core)
-	androidTestImplementation(libs.androidx.junit)
+	androidTestImplementation(libs.bundles.android.test)
 
 	debugImplementation(libs.androidx.compose.ui.test.manifest)
 	debugImplementation(libs.androidx.compose.ui.tooling)

@@ -15,8 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import eu.pw.apod.designsystem.ui.theme.ApodTheme
 import eu.pw.apod.presentation.apod.model.ApodUi
-import eu.pw.designsystem.ui.theme.ApodTheme
 
 @Composable
 internal fun ApodSuccessContent(

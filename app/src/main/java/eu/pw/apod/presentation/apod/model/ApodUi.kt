@@ -1,6 +1,6 @@
 package eu.pw.apod.presentation.apod.model
 
-import eu.pw.domain.contract.model.Apod
+import eu.pw.apod.domain.contract.model.Apod
 import javax.inject.Inject
 
 internal class ApodUi(

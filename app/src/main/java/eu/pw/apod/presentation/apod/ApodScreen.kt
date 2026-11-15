@@ -18,9 +18,9 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import eu.pw.apod.R
+import eu.pw.apod.designsystem.ui.theme.ApodTheme
 import eu.pw.apod.presentation.apod.componet.ApodScreenBottomBar
 import eu.pw.apod.presentation.apod.componet.ApodSuccessContent
-import eu.pw.designsystem.ui.theme.ApodTheme
 
 @Composable
 internal fun ApodScreen(

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-	namespace = "eu.pw.designsystem"
+	namespace = "eu.pw.apod.designsystem"
 }
 
 dependencies {

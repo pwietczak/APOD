@@ -21,9 +21,8 @@ dependencies {
 	ksp(libs.hilt.compiler.androidx)
 	ksp(libs.moshi.codegen)
 
-	testImplementation(libs.junit)
+	testImplementation(libs.bundles.unit.test)
 	testImplementation(libs.ktor.client.mock)
-	testImplementation(libs.kotlinx.coroutines.test)
 
 	androidTestImplementation(libs.androidx.junit)
 }

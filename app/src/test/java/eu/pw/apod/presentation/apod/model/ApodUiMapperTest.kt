@@ -1,7 +1,7 @@
 package eu.pw.apod.presentation.apod.model
 
-import eu.pw.domain.contract.model.Apod
-import eu.pw.domain.contract.model.Image
+import eu.pw.apod.domain.contract.model.Apod
+import eu.pw.apod.domain.contract.model.Image
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

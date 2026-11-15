@@ -3,8 +3,8 @@ package eu.pw.apod.presentation.apod
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import eu.pw.apod.domain.contract.usecase.GetApodUseCase
 import eu.pw.apod.presentation.apod.model.ApodUiMapper
-import eu.pw.domain.contract.usecase.GetApodUseCase
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
